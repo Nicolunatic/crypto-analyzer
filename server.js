@@ -1,4 +1,4 @@
-ï»¿const express = require('express');
+const express = require('express');
 const cors = require('cors');
 const axios = require('axios');
 const path = require('path');
@@ -10,7 +10,16 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-// Cache para evitar muitas requisiÃ§Ãµes
+// Configurar axios com headers para evitar bloqueio
+const api = axios.create({
+    headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+        'Accept': 'application/json'
+    },
+    timeout: 30000
+});
+
+// Cache para evitar muitas requisições
 let cache = {
     fearGreed: { data: null, timestamp: 0 },
     cryptos: { data: null, timestamp: 0 },
@@ -47,7 +56,7 @@ app.get('/api/fear-greed', async (req, res) => {
         if (cache.fearGreed.data && Date.now() - cache.fearGreed.timestamp < CACHE_DURATION) {
             return res.json(cache.fearGreed.data);
         }
-        const response = await axios.get('https://api.alternative.me/fng/?limit=1');
+        const response = await api.get('https://api.alternative.me/fng/?limit=1');
         cache.fearGreed = { data: response.data, timestamp: Date.now() };
         res.json(response.data);
     } catch (error) {
@@ -55,7 +64,7 @@ app.get('/api/fear-greed', async (req, res) => {
     }
 });
 
-// API: Lista de criptos (CoinGecko - SEM BLOQUEIO GEOGRÃFICO)
+// API: Lista de criptos (CoinGecko - SEM BLOQUEIO GEOGRÁFICO)
 app.get('/api/cryptos', async (req, res) => {
     try {
         if (cache.cryptos.data && Date.now() - cache.cryptos.timestamp < CACHE_DURATION) {
@@ -64,7 +73,7 @@ app.get('/api/cryptos', async (req, res) => {
 
         const ids = CURATED_CRYPTOS.map(c => c.id).join(',');
         const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=' + ids + '&order=market_cap_desc&sparkline=false&price_change_percentage=24h';
-        const response = await axios.get(url);
+        const response = await api.get(url);
         
         const cryptos = response.data.map(coin => {
             const curated = CURATED_CRYPTOS.find(c => c.id === coin.id);
@@ -92,7 +101,7 @@ app.get('/api/cryptos', async (req, res) => {
     }
 });
 
-// API: HistÃ³rico de preÃ§os e backtest MA50 (CoinGecko - 365 dias)
+// API: Histórico de preços e backtest MA50 (CoinGecko - 365 dias)
 app.get('/api/ma50-backtest/:symbol', async (req, res) => {
     try {
         const { symbol } = req.params;
@@ -107,9 +116,9 @@ app.get('/api/ma50-backtest/:symbol', async (req, res) => {
             return res.json({ error: 'Crypto not found', days: 0 });
         }
 
-        // CoinGecko: mÃ¡ximo 365 dias grÃ¡tis
+        // CoinGecko: máximo 365 dias grátis
         const url = 'https://api.coingecko.com/api/v3/coins/' + curated.id + '/market_chart?vs_currency=usd&days=365&interval=daily';
-        const response = await axios.get(url);
+        const response = await api.get(url);
         
         const prices = response.data.prices.map(p => p[1]);
         
