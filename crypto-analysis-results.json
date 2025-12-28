@@ -1,0 +1,1592 @@
+[
+  {
+    "symbol": "BNB",
+    "period": "2018-02-01 a 2025-12-28",
+    "days": 2884,
+    "startPrice": 9.5138,
+    "endPrice": 859.03,
+    "priceChange": 8929.30479934411,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 8929.30479934411,
+        "finalValue": 9029.30479934411,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": 468.821651278686,
+        "finalValue": 568.821651278686,
+        "trades": 7
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": 375.1914115171213,
+        "finalValue": 475.1914115171213,
+        "trades": 9
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": 139.7357652089369,
+        "finalValue": 239.7357652089369,
+        "trades": 11
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -24.297370416582112,
+        "finalValue": 75.70262958341789,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 8929.30479934411,
+      "finalValue": 9029.30479934411,
+      "trades": 1
+    },
+    "holdProfit": 8929.30479934411
+  },
+  {
+    "symbol": "MATIC",
+    "period": "2019-04-26 a 2024-09-10",
+    "days": 1965,
+    "startPrice": 0.00545,
+    "endPrice": 0.3794,
+    "priceChange": 6861.467889908257,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 6861.467889908257,
+        "finalValue": 6961.467889908258,
+        "trades": 1
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": 91.43619463719955,
+        "finalValue": 191.43619463719955,
+        "trades": 19
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -37.751024666185074,
+        "finalValue": 62.248975333814926,
+        "trades": 5
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -39.86308466198357,
+        "finalValue": 60.13691533801643,
+        "trades": 7
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -40.83444215308396,
+        "finalValue": 59.16555784691604,
+        "trades": 4
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 6861.467889908257,
+      "finalValue": 6961.467889908258,
+      "trades": 1
+    },
+    "holdProfit": 6861.467889908257
+  },
+  {
+    "symbol": "SOL",
+    "period": "2020-08-11 a 2025-12-28",
+    "days": 1965,
+    "startPrice": 3.2985,
+    "endPrice": 123.11,
+    "priceChange": 3632.3025617705016,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 3632.3025617705016,
+        "finalValue": 3732.3025617705016,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": 293.3146904412588,
+        "finalValue": 393.3146904412588,
+        "trades": 5
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": 201.5403942169225,
+        "finalValue": 301.5403942169225,
+        "trades": 7
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": 152.2491141554351,
+        "finalValue": 252.2491141554351,
+        "trades": 3
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -87.11227882778677,
+        "finalValue": 12.88772117221323,
+        "trades": 17
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 3632.3025617705016,
+      "finalValue": 3732.3025617705016,
+      "trades": 1
+    },
+    "holdProfit": 3632.3025617705016
+  },
+  {
+    "symbol": "DOGE",
+    "period": "2019-07-05 a 2025-12-28",
+    "days": 2368,
+    "startPrice": 0.0038701,
+    "endPrice": 0.1232,
+    "priceChange": 3083.380274411514,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 3083.3802744115137,
+        "finalValue": 3183.3802744115137,
+        "trades": 1
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -37.524549678034354,
+        "finalValue": 62.475450321965646,
+        "trades": 9
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -39.389423350406894,
+        "finalValue": 60.610576649593106,
+        "trades": 7
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -71.88862687231544,
+        "finalValue": 28.111373127684555,
+        "trades": 19
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -76.73062966102583,
+        "finalValue": 23.26937033897417,
+        "trades": 5
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 3083.3802744115137,
+      "finalValue": 3183.3802744115137,
+      "trades": 1
+    },
+    "holdProfit": 3083.3802744115137
+  },
+  {
+    "symbol": "LINK",
+    "period": "2019-01-16 a 2025-12-28",
+    "days": 2538,
+    "startPrice": 0.4895,
+    "endPrice": 12.33,
+    "priceChange": 2418.896833503575,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 2418.896833503575,
+        "finalValue": 2518.896833503575,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": 1378.3070583675537,
+        "finalValue": 1478.3070583675537,
+        "trades": 7
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": 1302.3587551802148,
+        "finalValue": 1402.3587551802148,
+        "trades": 9
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": 402.10563450417266,
+        "finalValue": 502.10563450417266,
+        "trades": 11
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": 8.132938200918943,
+        "finalValue": 108.13293820091894,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 2418.896833503575,
+      "finalValue": 2518.896833503575,
+      "trades": 1
+    },
+    "holdProfit": 2418.896833503575
+  },
+  {
+    "symbol": "BTC",
+    "period": "2018-02-01 a 2025-12-28",
+    "days": 2884,
+    "startPrice": 9224.52,
+    "endPrice": 87471.18,
+    "priceChange": 848.2464128214799,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 848.2464128214801,
+        "finalValue": 948.24641282148,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": 382.1667882623441,
+        "finalValue": 482.1667882623441,
+        "trades": 9
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": 235.32071155941105,
+        "finalValue": 335.32071155941105,
+        "trades": 7
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": 150.50460734652722,
+        "finalValue": 250.50460734652722,
+        "trades": 11
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -12.377785824714934,
+        "finalValue": 87.62221417528507,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 848.2464128214801,
+      "finalValue": 948.24641282148,
+      "trades": 1
+    },
+    "holdProfit": 848.2464128214801
+  },
+  {
+    "symbol": "INJ",
+    "period": "2020-10-21 a 2025-12-28",
+    "days": 1894,
+    "startPrice": 0.7803,
+    "endPrice": 4.714,
+    "priceChange": 504.12661796744845,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 504.1266179674485,
+        "finalValue": 604.1266179674485,
+        "trades": 1
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": 29.708898895774748,
+        "finalValue": 129.70889889577475,
+        "trades": 7
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": 26.588619153301764,
+        "finalValue": 126.58861915330176,
+        "trades": 5
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": 1.301291332804837,
+        "finalValue": 101.30129133280484,
+        "trades": 3
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -76.27246457484566,
+        "finalValue": 23.727535425154343,
+        "trades": 15
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 504.1266179674485,
+      "finalValue": 604.1266179674485,
+      "trades": 1
+    },
+    "holdProfit": 504.1266179674485
+  },
+  {
+    "symbol": "AAVE",
+    "period": "2020-10-15 a 2025-12-28",
+    "days": 1900,
+    "startPrice": 42.999,
+    "endPrice": 152.94,
+    "priceChange": 255.6826902951231,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 255.68269029512317,
+        "finalValue": 355.68269029512317,
+        "trades": 1
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -33.37369936768512,
+        "finalValue": 66.62630063231488,
+        "trades": 15
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -63.15428131460521,
+        "finalValue": 36.845718685394786,
+        "trades": 7
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -76.52346768490756,
+        "finalValue": 23.476532315092438,
+        "trades": 5
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -83.02875352026497,
+        "finalValue": 16.971246479735033,
+        "trades": 3
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 255.68269029512317,
+      "finalValue": 355.68269029512317,
+      "trades": 1
+    },
+    "holdProfit": 255.68269029512317
+  },
+  {
+    "symbol": "MKR",
+    "period": "2020-07-23 a 2025-09-15",
+    "days": 1880,
+    "startPrice": 529.32,
+    "endPrice": 1813.7,
+    "priceChange": 242.6471699539031,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 242.64716995390305,
+        "finalValue": 342.6471699539031,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -47.006017183468984,
+        "finalValue": 52.993982816531016,
+        "trades": 3
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -63.56972530367933,
+        "finalValue": 36.43027469632067,
+        "trades": 5
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -73.46784196380796,
+        "finalValue": 26.532158036192037,
+        "trades": 7
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -75.94451831346663,
+        "finalValue": 24.055481686533366,
+        "trades": 17
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 242.64716995390305,
+      "finalValue": 342.6471699539031,
+      "trades": 1
+    },
+    "holdProfit": 242.64716995390305
+  },
+  {
+    "symbol": "BCH",
+    "period": "2019-11-28 a 2025-12-28",
+    "days": 2222,
+    "startPrice": 217.41,
+    "endPrice": 619.6,
+    "priceChange": 184.99149073179711,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 184.99149073179706,
+        "finalValue": 284.99149073179706,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": 39.646066241730324,
+        "finalValue": 139.64606624173032,
+        "trades": 5
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": 22.85385276890564,
+        "finalValue": 122.85385276890564,
+        "trades": 7
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -4.0083037398675,
+        "finalValue": 95.9916962601325,
+        "trades": 9
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -18.693241152159345,
+        "finalValue": 81.30675884784065,
+        "trades": 19
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 184.99149073179706,
+      "finalValue": 284.99149073179706,
+      "trades": 1
+    },
+    "holdProfit": 184.99149073179706
+  },
+  {
+    "symbol": "ETH",
+    "period": "2018-02-01 a 2025-12-28",
+    "days": 2884,
+    "startPrice": 1041.94,
+    "endPrice": 2932.75,
+    "priceChange": 181.4701422346776,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 181.4701422346776,
+        "finalValue": 281.4701422346776,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": 37.157136640283284,
+        "finalValue": 137.15713664028328,
+        "trades": 7
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": 15.833898433711866,
+        "finalValue": 115.83389843371187,
+        "trades": 9
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -44.702894863703094,
+        "finalValue": 55.297105136296906,
+        "trades": 11
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -89.41713527957877,
+        "finalValue": 10.582864720421231,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 181.4701422346776,
+      "finalValue": 281.4701422346776,
+      "trades": 1
+    },
+    "holdProfit": 181.4701422346776
+  },
+  {
+    "symbol": "AVAX",
+    "period": "2020-09-22 a 2025-12-28",
+    "days": 1923,
+    "startPrice": 5.3193,
+    "endPrice": 12.54,
+    "priceChange": 135.74530483334271,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 135.7453048333427,
+        "finalValue": 235.7453048333427,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -0.32390492043862196,
+        "finalValue": 99.67609507956138,
+        "trades": 5
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -12.47653365495519,
+        "finalValue": 87.52346634504481,
+        "trades": 3
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -56.70059685792239,
+        "finalValue": 43.29940314207761,
+        "trades": 7
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -92.44877328131815,
+        "finalValue": 7.551226718681844,
+        "trades": 17
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 135.7453048333427,
+      "finalValue": 235.7453048333427,
+      "trades": 1
+    },
+    "holdProfit": 135.7453048333427
+  },
+  {
+    "symbol": "XRP",
+    "period": "2018-05-04 a 2025-12-28",
+    "days": 2795,
+    "startPrice": 0.8899,
+    "endPrice": 1.8551,
+    "priceChange": 108.46162490167434,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 108.46162490167433,
+        "finalValue": 208.46162490167433,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -54.09875923960201,
+        "finalValue": 45.90124076039798,
+        "trades": 9
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -62.95185898172952,
+        "finalValue": 37.04814101827047,
+        "trades": 11
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -67.61201613839523,
+        "finalValue": 32.38798386160477,
+        "trades": 7
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -86.80670149208946,
+        "finalValue": 13.193298507910535,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 108.46162490167433,
+      "finalValue": 208.46162490167433,
+      "trades": 1
+    },
+    "holdProfit": 108.46162490167433
+  },
+  {
+    "symbol": "SHIB",
+    "period": "2021-05-10 a 2025-12-28",
+    "days": 1693,
+    "startPrice": 0.00003466,
+    "endPrice": 0.00000728,
+    "priceChange": -78.99596076168494,
+    "strategies": [
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": 83.903405480169,
+        "finalValue": 183.903405480169,
+        "trades": 3
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": 83.29440707523668,
+        "finalValue": 183.29440707523668,
+        "trades": 5
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -59.444797626794056,
+        "finalValue": 40.555202373205944,
+        "trades": 7
+      },
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -78.99596076168494,
+        "finalValue": 21.004039238315062,
+        "trades": 1
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -84.12069116710374,
+        "finalValue": 15.879308832896262,
+        "trades": 11
+      }
+    ],
+    "bestStrategy": {
+      "name": "Ultra Conservador",
+      "desc": "So Medo Extremo",
+      "profit": 83.903405480169,
+      "finalValue": 183.903405480169,
+      "trades": 3
+    },
+    "holdProfit": -78.99596076168494
+  },
+  {
+    "symbol": "UNI",
+    "period": "2020-09-17 a 2025-12-28",
+    "days": 1928,
+    "startPrice": 3.4617,
+    "endPrice": 6.127,
+    "priceChange": 76.99396250397203,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 76.99396250397203,
+        "finalValue": 176.99396250397203,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -57.593980872223014,
+        "finalValue": 42.40601912777698,
+        "trades": 5
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -61.01205144829689,
+        "finalValue": 38.98794855170311,
+        "trades": 3
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -66.25496184719353,
+        "finalValue": 33.74503815280648,
+        "trades": 7
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -84.68173878272063,
+        "finalValue": 15.31826121727937,
+        "trades": 17
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 76.99396250397203,
+      "finalValue": 176.99396250397203,
+      "trades": 1
+    },
+    "holdProfit": 76.99396250397203
+  },
+  {
+    "symbol": "ADA",
+    "period": "2018-04-17 a 2025-12-28",
+    "days": 2812,
+    "startPrice": 0.2426,
+    "endPrice": 0.3617,
+    "priceChange": 49.09315746084089,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 49.0931574608409,
+        "finalValue": 149.0931574608409,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -66.1298195857276,
+        "finalValue": 33.8701804142724,
+        "trades": 9
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -73.09849586643611,
+        "finalValue": 26.90150413356389,
+        "trades": 7
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -77.62498762963952,
+        "finalValue": 22.375012370360484,
+        "trades": 11
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -89.10155010746406,
+        "finalValue": 10.898449892535938,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 49.0931574608409,
+      "finalValue": 149.0931574608409,
+      "trades": 1
+    },
+    "holdProfit": 49.0931574608409
+  },
+  {
+    "symbol": "NEAR",
+    "period": "2020-10-14 a 2025-12-28",
+    "days": 1901,
+    "startPrice": 1.1685,
+    "endPrice": 1.556,
+    "priceChange": 33.16217372700042,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": 33.16217372700041,
+        "finalValue": 133.1621737270004,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -42.94024905160857,
+        "finalValue": 57.05975094839143,
+        "trades": 5
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -48.44915562451319,
+        "finalValue": 51.55084437548681,
+        "trades": 3
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -62.87512692600076,
+        "finalValue": 37.12487307399925,
+        "trades": 7
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -93.46138514809107,
+        "finalValue": 6.538614851908925,
+        "trades": 15
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": 33.16217372700041,
+      "finalValue": 133.1621737270004,
+      "trades": 1
+    },
+    "holdProfit": 33.16217372700041
+  },
+  {
+    "symbol": "OP",
+    "period": "2022-06-01 a 2025-12-28",
+    "days": 1306,
+    "startPrice": 1.232,
+    "endPrice": 0.27,
+    "priceChange": -78.08441558441558,
+    "strategies": [
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": 17.505074560181825,
+        "finalValue": 117.50507456018182,
+        "trades": 5
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -25.588902620715615,
+        "finalValue": 74.41109737928439,
+        "trades": 5
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -28.84980922002046,
+        "finalValue": 71.15019077997954,
+        "trades": 3
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -62.42512988702437,
+        "finalValue": 37.57487011297563,
+        "trades": 7
+      },
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -78.08441558441558,
+        "finalValue": 21.91558441558442,
+        "trades": 1
+      }
+    ],
+    "bestStrategy": {
+      "name": "Conservador",
+      "desc": "Medo Extremo -> Ganancia Extrema",
+      "profit": 17.505074560181825,
+      "finalValue": 117.50507456018182,
+      "trades": 5
+    },
+    "holdProfit": -78.08441558441558
+  },
+  {
+    "symbol": "APT",
+    "period": "2022-10-19 a 2025-12-28",
+    "days": 1166,
+    "startPrice": 7.3207,
+    "endPrice": 1.699,
+    "priceChange": -76.79183684620324,
+    "strategies": [
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": 3.101621263839206,
+        "finalValue": 103.1016212638392,
+        "trades": 5
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -3.3118371929511032,
+        "finalValue": 96.6881628070489,
+        "trades": 5
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -44.794971247327595,
+        "finalValue": 55.205028752672405,
+        "trades": 7
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -72.41883116883116,
+        "finalValue": 27.58116883116883,
+        "trades": 1
+      },
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -76.79183684620324,
+        "finalValue": 23.208163153796768,
+        "trades": 1
+      }
+    ],
+    "bestStrategy": {
+      "name": "Moderado",
+      "desc": "Medo Forte -> Ganancia Alta",
+      "profit": 3.101621263839206,
+      "finalValue": 103.1016212638392,
+      "trades": 5
+    },
+    "holdProfit": -76.79183684620324
+  },
+  {
+    "symbol": "ETC",
+    "period": "2018-06-12 a 2025-12-28",
+    "days": 2756,
+    "startPrice": 14.6282,
+    "endPrice": 12.04,
+    "priceChange": -17.6932226794821,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -17.693222679482105,
+        "finalValue": 82.3067773205179,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -80.70532067678133,
+        "finalValue": 19.29467932321868,
+        "trades": 9
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -81.26247985754307,
+        "finalValue": 18.737520142456926,
+        "trades": 11
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -82.12158092258235,
+        "finalValue": 17.878419077417643,
+        "trades": 7
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -82.31416718237506,
+        "finalValue": 17.68583281762494,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": -17.693222679482105,
+      "finalValue": 82.3067773205179,
+      "trades": 1
+    },
+    "holdProfit": -17.693222679482105
+  },
+  {
+    "symbol": "XLM",
+    "period": "2018-05-31 a 2025-12-28",
+    "days": 2768,
+    "startPrice": 0.29568,
+    "endPrice": 0.2188,
+    "priceChange": -26.001082251082252,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -26.001082251082252,
+        "finalValue": 73.99891774891775,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -85.4272070596367,
+        "finalValue": 14.572792940363303,
+        "trades": 9
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -87.75472409367279,
+        "finalValue": 12.245275906327207,
+        "trades": 7
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -88.25238816888553,
+        "finalValue": 11.747611831114474,
+        "trades": 11
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -93.48839185400217,
+        "finalValue": 6.511608145997826,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": -26.001082251082252,
+      "finalValue": 73.99891774891775,
+      "trades": 1
+    },
+    "holdProfit": -26.001082251082252
+  },
+  {
+    "symbol": "RUNE",
+    "period": "2020-09-04 a 2025-12-28",
+    "days": 1941,
+    "startPrice": 0.8183,
+    "endPrice": 0.55,
+    "priceChange": -32.78748625198582,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -32.78748625198581,
+        "finalValue": 67.21251374801419,
+        "trades": 1
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -77.40237229081436,
+        "finalValue": 22.597627709185645,
+        "trades": 17
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -80.24830129297098,
+        "finalValue": 19.751698707029025,
+        "trades": 5
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -83.43414088612039,
+        "finalValue": 16.565859113879615,
+        "trades": 3
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -86.4308453721043,
+        "finalValue": 13.569154627895696,
+        "trades": 7
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": -32.78748625198581,
+      "finalValue": 67.21251374801419,
+      "trades": 1
+    },
+    "holdProfit": -32.78748625198581
+  },
+  {
+    "symbol": "ARB",
+    "period": "2023-03-23 a 2025-12-28",
+    "days": 1011,
+    "startPrice": 1.3217,
+    "endPrice": 0.1928,
+    "priceChange": -85.41272603465234,
+    "strategies": [
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -39.15348059523057,
+        "finalValue": 60.84651940476943,
+        "trades": 3
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -54.624617557072256,
+        "finalValue": 45.37538244292775,
+        "trades": 1
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -58.58322184712543,
+        "finalValue": 41.41677815287457,
+        "trades": 3
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -73.81946802539034,
+        "finalValue": 26.180531974609657,
+        "trades": 7
+      },
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -85.41272603465234,
+        "finalValue": 14.587273965347658,
+        "trades": 1
+      }
+    ],
+    "bestStrategy": {
+      "name": "Conservador",
+      "desc": "Medo Extremo -> Ganancia Extrema",
+      "profit": -39.15348059523057,
+      "finalValue": 60.84651940476943,
+      "trades": 3
+    },
+    "holdProfit": -85.41272603465234
+  },
+  {
+    "symbol": "DOT",
+    "period": "2020-08-18 a 2025-12-28",
+    "days": 1958,
+    "startPrice": 3.1,
+    "endPrice": 1.841,
+    "priceChange": -40.612903225806456,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -40.612903225806456,
+        "finalValue": 59.387096774193544,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -87.99113419031904,
+        "finalValue": 12.00886580968095,
+        "trades": 3
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -90.1423008305338,
+        "finalValue": 9.8576991694662,
+        "trades": 5
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -91.42984286653122,
+        "finalValue": 8.570157133468777,
+        "trades": 7
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -96.78658664987839,
+        "finalValue": 3.2134133501216198,
+        "trades": 17
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": -40.612903225806456,
+      "finalValue": 59.387096774193544,
+      "trades": 1
+    },
+    "holdProfit": -40.612903225806456
+  },
+  {
+    "symbol": "LTC",
+    "period": "2018-02-01 a 2025-12-28",
+    "days": 2884,
+    "startPrice": 143.69,
+    "endPrice": 78.26,
+    "priceChange": -45.5355278725033,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -45.5355278725033,
+        "finalValue": 54.4644721274967,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -79.32440412431534,
+        "finalValue": 20.675595875684667,
+        "trades": 7
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -82.05147480422579,
+        "finalValue": 17.948525195774213,
+        "trades": 9
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -86.83638389215375,
+        "finalValue": 13.163616107846245,
+        "trades": 11
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -92.62534698681411,
+        "finalValue": 7.374653013185888,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": -45.5355278725033,
+      "finalValue": 54.4644721274967,
+      "trades": 1
+    },
+    "holdProfit": -45.5355278725033
+  },
+  {
+    "symbol": "ATOM",
+    "period": "2019-04-29 a 2025-12-28",
+    "days": 2435,
+    "startPrice": 3.777,
+    "endPrice": 2.056,
+    "priceChange": -45.56526343658989,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -45.56526343658989,
+        "finalValue": 54.43473656341011,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -45.58703113934971,
+        "finalValue": 54.41296886065029,
+        "trades": 5
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -69.52492238330177,
+        "finalValue": 30.475077616698222,
+        "trades": 7
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -76.20819306476072,
+        "finalValue": 23.79180693523928,
+        "trades": 9
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -91.13037125616277,
+        "finalValue": 8.869628743837229,
+        "trades": 21
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": -45.56526343658989,
+      "finalValue": 54.43473656341011,
+      "trades": 1
+    },
+    "holdProfit": -45.56526343658989
+  },
+  {
+    "symbol": "VET",
+    "period": "2018-07-25 a 2025-12-28",
+    "days": 2713,
+    "startPrice": 0.02115,
+    "endPrice": 0.01105,
+    "priceChange": -47.754137115839235,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -47.754137115839235,
+        "finalValue": 52.245862884160765,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -81.45554162388684,
+        "finalValue": 18.544458376113155,
+        "trades": 7
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -82.627024270045,
+        "finalValue": 17.372975729954998,
+        "trades": 9
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -83.13106113061261,
+        "finalValue": 16.868938869387385,
+        "trades": 11
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -97.84016724426255,
+        "finalValue": 2.159832755737461,
+        "trades": 23
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": -47.754137115839235,
+      "finalValue": 52.245862884160765,
+      "trades": 1
+    },
+    "holdProfit": -47.754137115839235
+  },
+  {
+    "symbol": "GRT",
+    "period": "2020-12-17 a 2025-12-28",
+    "days": 1837,
+    "startPrice": 0.12275,
+    "endPrice": 0.03749,
+    "priceChange": -69.45824847250509,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -69.45824847250509,
+        "finalValue": 30.54175152749491,
+        "trades": 1
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -90.6718606898482,
+        "finalValue": 9.328139310151803,
+        "trades": 3
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -90.89748402306137,
+        "finalValue": 9.102515976938626,
+        "trades": 5
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -94.05339044809777,
+        "finalValue": 5.946609551902228,
+        "trades": 7
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -97.63262882315811,
+        "finalValue": 2.367371176841885,
+        "trades": 15
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": -69.45824847250509,
+      "finalValue": 30.54175152749491,
+      "trades": 1
+    },
+    "holdProfit": -69.45824847250509
+  },
+  {
+    "symbol": "ALGO",
+    "period": "2019-06-22 a 2025-12-28",
+    "days": 2381,
+    "startPrice": 2.192,
+    "endPrice": 0.1186,
+    "priceChange": -94.58941605839416,
+    "strategies": [
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -94.58941605839416,
+        "finalValue": 5.4105839416058386,
+        "trades": 1
+      },
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -95.36393934642336,
+        "finalValue": 4.636060653576641,
+        "trades": 7
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -95.9824650785664,
+        "finalValue": 4.017534921433599,
+        "trades": 5
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -96.55700527491113,
+        "finalValue": 3.4429947250888606,
+        "trades": 9
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -99.15679467355909,
+        "finalValue": 0.8432053264409056,
+        "trades": 19
+      }
+    ],
+    "bestStrategy": {
+      "name": "HOLD",
+      "desc": "Comprar e segurar",
+      "profit": -94.58941605839416,
+      "finalValue": 5.4105839416058386,
+      "trades": 1
+    },
+    "holdProfit": -94.58941605839416
+  },
+  {
+    "symbol": "FIL",
+    "period": "2020-10-15 a 2025-12-28",
+    "days": 1900,
+    "startPrice": 62.5418,
+    "endPrice": 1.32,
+    "priceChange": -97.88941156154763,
+    "strategies": [
+      {
+        "name": "Conservador",
+        "desc": "Medo Extremo -> Ganancia Extrema",
+        "profit": -95.85868712356687,
+        "finalValue": 4.141312876433138,
+        "trades": 5
+      },
+      {
+        "name": "Ultra Conservador",
+        "desc": "So Medo Extremo",
+        "profit": -95.94701297594833,
+        "finalValue": 4.05298702405168,
+        "trades": 3
+      },
+      {
+        "name": "Moderado",
+        "desc": "Medo Forte -> Ganancia Alta",
+        "profit": -96.42561850916387,
+        "finalValue": 3.5743814908361307,
+        "trades": 7
+      },
+      {
+        "name": "HOLD",
+        "desc": "Comprar e segurar",
+        "profit": -97.88941156154763,
+        "finalValue": 2.110588438452363,
+        "trades": 1
+      },
+      {
+        "name": "Agressivo",
+        "desc": "Medo -> Ganancia",
+        "profit": -98.24247913775484,
+        "finalValue": 1.7575208622451524,
+        "trades": 15
+      }
+    ],
+    "bestStrategy": {
+      "name": "Conservador",
+      "desc": "Medo Extremo -> Ganancia Extrema",
+      "profit": -95.85868712356687,
+      "finalValue": 4.141312876433138,
+      "trades": 5
+    },
+    "holdProfit": -97.88941156154763
+  }
+]

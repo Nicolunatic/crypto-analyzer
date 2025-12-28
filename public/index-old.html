@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Analyzer - Medo & Ganância</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --fear-extreme: #e74c3c;
+            --fear: #e67e22;
+            --neutral: #f39c12;
+            --greed: #27ae60;
+            --greed-extreme: #2ecc71;
+            --bg-dark: #0d1117;
+            --bg-card: #161b22;
+            --text-primary: #f0f6fc;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+        }
+
+        body {
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            background: var(--bg-card) !important;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+        }
+
+        .card-header {
+            background: transparent;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 600;
+        }
+
+        /* Fear & Greed Gauge */
+        .fng-gauge {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            margin: 0 auto;
+        }
+
+        .fng-value {
+            font-size: 3rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .fng-label {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .fng-extreme-fear { color: var(--fear-extreme); }
+        .fng-fear { color: var(--fear); }
+        .fng-neutral { color: var(--neutral); }
+        .fng-greed { color: var(--greed); }
+        .fng-extreme-greed { color: var(--greed-extreme); }
+
+        /* Crypto Table */
+        .crypto-table {
+            font-size: 0.9rem;
+        }
+
+        .crypto-table th {
+            background: var(--bg-dark);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .crypto-table td, .crypto-table th {
+            border-color: var(--border-color);
+            vertical-align: middle;
+        }
+
+        .crypto-symbol {
+            font-weight: 600;
+            color: #58a6ff;
+        }
+
+        .price-up { color: var(--greed-extreme); }
+        .price-down { color: var(--fear-extreme); }
+
+        /* Recommendation Badge */
+        .badge-strong-buy { background: var(--greed-extreme); }
+        .badge-buy { background: var(--greed); }
+        .badge-hold { background: var(--neutral); }
+        .badge-sell { background: var(--fear); }
+        .badge-strong-sell { background: var(--fear-extreme); }
+
+        /* Simulator */
+        .simulator-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #1a2332 100%);
+        }
+
+        .strategy-btn {
+            border: 2px solid var(--border-color);
+            background: transparent;
+            color: var(--text-primary);
+            padding: 15px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .strategy-btn:hover, .strategy-btn.active {
+            border-color: #58a6ff;
+            background: rgba(88, 166, 255, 0.1);
+        }
+
+        .strategy-btn.active {
+            box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+        }
+
+        /* Results */
+        .result-positive { 
+            color: var(--greed-extreme); 
+            background: rgba(46, 204, 113, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        .result-negative { 
+            color: var(--fear-extreme);
+            background: rgba(231, 76, 60, 0.1);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--border-color);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #58a6ff;
+        }
+
+        /* Loading */
+        .loading-spinner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        /* Tab styling */
+        .nav-tabs {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .nav-tabs .nav-link {
+            color: var(--text-secondary);
+            border: none;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-tabs .nav-link:hover {
+            border-color: transparent;
+            color: var(--text-primary);
+        }
+
+        .nav-tabs .nav-link.active {
+            background: transparent;
+            color: #58a6ff;
+            border-bottom: 2px solid #58a6ff;
+        }
+
+        .table-responsive {
+            max-height: 600px;
+            overflow-y: auto;
+        }
+
+        .rank-badge {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.8rem;
+        }
+
+        .rank-1 { background: gold; color: #000; }
+        .rank-2 { background: silver; color: #000; }
+        .rank-3 { background: #cd7f32; color: #000; }
+
+        .info-tooltip {
+            cursor: help;
+            color: var(--text-secondary);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-dark mb-4">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-chart-line me-2"></i>
+                Crypto Analyzer
+            </a>
+            <span class="text-secondary">
+                <i class="fas fa-clock me-1"></i>
+                <span id="lastUpdate">Carregando...</span>
+            </span>
+        </div>
+    </nav>
+
+    <div class="container-fluid px-4">
+        <!-- Fear & Greed Index -->
+        <div class="row mb-4">
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <i class="fas fa-heartbeat me-2"></i>
+                        Índice de Medo & Ganância
+                    </div>
+                    <div class="card-body text-center">
+                        <div id="fngLoading" class="loading-spinner">
+                            <div class="spinner-border text-primary" role="status"></div>
+                        </div>
+                        <div id="fngContent" style="display: none;">
+                            <div class="fng-value" id="fngValue">--</div>
+                            <div class="fng-label" id="fngLabel">Carregando...</div>
+                            <div class="progress mt-3" style="height: 10px;">
+                                <div class="progress-bar" id="fngProgress" role="progressbar" style="width: 0%"></div>
+                            </div>
+                            <div class="d-flex justify-content-between mt-2 small text-secondary">
+                                <span>Medo Extremo</span>
+                                <span>Ganância Extrema</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <i class="fas fa-chart-area me-2"></i>
+                        Histórico do Índice (30 dias)
+                    </div>
+                    <div class="card-body">
+                        <canvas id="fngChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-4" id="mainTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="ranking-tab" data-bs-toggle="tab" href="#ranking" role="tab">
+                    <i class="fas fa-list-ol me-2"></i>Top 100 Criptos
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="simulator-tab" data-bs-toggle="tab" href="#simulator" role="tab">
+                    <i class="fas fa-flask me-2"></i>Simulador
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="projection-tab" data-bs-toggle="tab" href="#projection" role="tab">
+                    <i class="fas fa-calculator me-2"></i>Projeção Histórica
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <!-- Tab: Ranking -->
+            <div class="tab-pane fade show active" id="ranking" role="tabpanel">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <span><i class="fas fa-coins me-2"></i>Top 100 Criptomoedas por Volume</span>
+                        <div>
+                            <button class="btn btn-sm btn-outline-light me-2" onclick="loadCryptos()">
+                                <i class="fas fa-sync-alt"></i>
+                            </button>
+                            <select id="sortBy" class="form-select form-select-sm d-inline-block w-auto" onchange="sortCryptos()">
+                                <option value="volume">Volume</option>
+                                <option value="change">Variação 24h</option>
+                                <option value="recommendation">Recomendação</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-body p-0">
+                        <div id="cryptoLoading" class="loading-spinner">
+                            <div class="spinner-border text-primary" role="status"></div>
+                        </div>
+                        <div class="table-responsive" id="cryptoTableContainer" style="display: none;">
+                            <table class="table table-dark crypto-table mb-0">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Moeda</th>
+                                        <th>Preço</th>
+                                        <th>24h %</th>
+                                        <th>Volume 24h</th>
+                                        <th>Máx 24h</th>
+                                        <th>Mín 24h</th>
+                                        <th>
+                                            Recomendação
+                                            <i class="fas fa-info-circle info-tooltip ms-1" 
+                                               title="Baseado no índice de Medo & Ganância atual"></i>
+                                        </th>
+                                        <th>Ação</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="cryptoTableBody">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Simulator -->
+            <div class="tab-pane fade" id="simulator" role="tabpanel">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <i class="fas fa-flask me-2"></i>Simulador - Estratégia Medo & Ganância Extrema
+                        <span class="badge bg-info ms-2">Compra F&G ≤ 40 | Vende F&G ≥ 75</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="text-secondary mb-4">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <strong>Estratégia:</strong> Comprar quando o mercado está com MEDO (F&G ≤ 40) e vender quando atinge GANÂNCIA EXTREMA (F&G ≥ 75).
+                            A análise é feita desde o nascimento de cada criptomoeda na Binance.
+                        </p>
+                        
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <label class="form-label">Valor Inicial para Simulação (USD)</label>
+                                <input type="number" id="simAmount" class="form-control bg-dark text-light border-secondary" value="10000">
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Analisar Cripto Específica</label>
+                                <div class="input-group">
+                                    <input type="text" id="simCrypto" class="form-control bg-dark text-light border-secondary" placeholder="Ex: BTC, ETH, SOL">
+                                    <button class="btn btn-primary" onclick="runSingleSimulation()">
+                                        <i class="fas fa-search"></i> Analisar
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label">Ou Analise Todas as Top 100</label>
+                                <button class="btn btn-success w-100" onclick="runAllSimulations()">
+                                    <i class="fas fa-chart-bar me-2"></i>Analisar Todas as Criptos
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Loading -->
+                        <div id="simLoading" class="text-center py-5" style="display: none;">
+                            <div class="spinner-border text-primary mb-3" role="status"></div>
+                            <p id="simLoadingText">Analisando criptomoedas...</p>
+                        </div>
+
+                        <!-- Single Result -->
+                        <div id="singleSimResult" style="display: none;">
+                            <div class="row mb-4">
+                                <div class="col-md-3">
+                                    <div class="card bg-dark">
+                                        <div class="card-body text-center">
+                                            <h6 class="text-secondary">Período Analisado</h6>
+                                            <h4 id="singlePeriod">-</h4>
+                                            <small id="singleDays" class="text-secondary">- dias</small>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div id="singleStrategyCard" class="card">
+                                        <div class="card-body text-center">
+                                            <h6 class="text-secondary">Estratégia F&G</h6>
+                                            <h4 id="singleStrategyValue">$0</h4>
+                                            <span id="singleStrategyPercent" class="badge">0%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div id="singleHoldCard" class="card">
+                                        <div class="card-body text-center">
+                                            <h6 class="text-secondary">Buy & Hold</h6>
+                                            <h4 id="singleHoldValue">$0</h4>
+                                            <span id="singleHoldPercent" class="badge">0%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card bg-dark">
+                                        <div class="card-body text-center">
+                                            <h6 class="text-secondary">Total de Trades</h6>
+                                            <h4 id="singleTrades">0</h4>
+                                            <small class="text-secondary"><span id="singleBuys">0</span> compras, <span id="singleSells">0</span> vendas</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div id="singleVerdict" class="alert mb-4"></div>
+                            
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <canvas id="simChart"></canvas>
+                                </div>
+                                <div class="col-md-4">
+                                    <h6><i class="fas fa-exchange-alt me-2"></i>Histórico de Trades</h6>
+                                    <div class="table-responsive" style="max-height: 400px;">
+                                        <table class="table table-dark table-sm">
+                                            <thead>
+                                                <tr>
+                                                    <th>Data</th>
+                                                    <th>Tipo</th>
+                                                    <th>F&G</th>
+                                                    <th>Preço</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tradesTable"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- All Results -->
+                        <div id="allSimResults" style="display: none;">
+                            <div class="row mb-4">
+                                <div class="col-md-3">
+                                    <div class="card bg-success bg-opacity-25">
+                                        <div class="card-body text-center">
+                                            <h6>Lucrativas</h6>
+                                            <h2 id="profitableCount">0</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card bg-danger bg-opacity-25">
+                                        <div class="card-body text-center">
+                                            <h6>Não Lucrativas</h6>
+                                            <h2 id="notProfitableCount">0</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card bg-info bg-opacity-25">
+                                        <div class="card-body text-center">
+                                            <h6>Bateram o Hold</h6>
+                                            <h2 id="beatHoldCount">0</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="card bg-warning bg-opacity-25">
+                                        <div class="card-body text-center">
+                                            <h6>Média de Retorno</h6>
+                                            <h2 id="avgReturn">0%</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="table-responsive">
+                                <table class="table table-dark crypto-table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Cripto</th>
+                                            <th>Período</th>
+                                            <th>Estratégia F&G</th>
+                                            <th>Buy & Hold</th>
+                                            <th>Trades</th>
+                                            <th>Resultado</th>
+                                            <th>Veredito</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="allResultsTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Projection -->
+            <div class="tab-pane fade" id="projection" role="tabpanel">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-history me-2"></i>Calculadora "E se..."
+                            </div>
+                            <div class="card-body">
+                                <p class="text-secondary small">
+                                    Descubra quanto você teria hoje se tivesse comprado em uma data específica do passado.
+                                </p>
+                                <div class="mb-3">
+                                    <label class="form-label">Criptomoeda</label>
+                                    <select id="projCrypto" class="form-select bg-dark text-light border-secondary">
+                                        <option value="BTC">Bitcoin (BTC)</option>
+                                        <option value="ETH">Ethereum (ETH)</option>
+                                        <option value="BNB">BNB</option>
+                                        <option value="SOL">Solana (SOL)</option>
+                                        <option value="XRP">XRP</option>
+                                        <option value="ADA">Cardano (ADA)</option>
+                                        <option value="DOGE">Dogecoin (DOGE)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Valor Investido (USD)</label>
+                                    <input type="number" id="projAmount" class="form-control bg-dark text-light border-secondary" value="1000">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Data de Compra</label>
+                                    <input type="date" id="projBuyDate" class="form-control bg-dark text-light border-secondary">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label">Data de Venda (ou hoje)</label>
+                                    <input type="date" id="projSellDate" class="form-control bg-dark text-light border-secondary">
+                                </div>
+                                <button class="btn btn-success w-100" onclick="calculateProjection()">
+                                    <i class="fas fa-calculator me-2"></i>Calcular
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="card">
+                            <div class="card-header">
+                                <i class="fas fa-money-bill-wave me-2"></i>Resultado da Projeção
+                            </div>
+                            <div class="card-body">
+                                <div id="projPlaceholder" class="text-center text-secondary py-5">
+                                    <i class="fas fa-calculator fa-3x mb-3"></i>
+                                    <p>Selecione uma cripto e as datas para calcular</p>
+                                </div>
+                                <div id="projResults" style="display: none;">
+                                    <div class="row text-center mb-4">
+                                        <div class="col-md-4">
+                                            <div class="p-3 bg-dark rounded">
+                                                <small class="text-secondary">Preço de Compra</small>
+                                                <h4 id="projBuyPrice">$0.00</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="p-3 bg-dark rounded">
+                                                <small class="text-secondary">Preço de Venda</small>
+                                                <h4 id="projSellPrice">$0.00</h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="p-3 bg-dark rounded">
+                                                <small class="text-secondary">Variação</small>
+                                                <h4 id="projChange">0%</h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center mb-4">
+                                        <div id="projFinalResult" class="result-positive p-4">
+                                            <small class="text-secondary">Seu investimento de <span id="projInvested">$0</span> valeria</small>
+                                            <h1 id="projFinalValue">$0.00</h1>
+                                            <h4 id="projProfitLoss">Lucro: $0.00</h4>
+                                        </div>
+                                    </div>
+                                    <div class="row text-center">
+                                        <div class="col-md-6">
+                                            <div class="p-3 border border-secondary rounded">
+                                                <small class="text-secondary">F&G na Compra</small>
+                                                <h5 id="projFngBuy">--</h5>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="p-3 border border-secondary rounded">
+                                                <small class="text-secondary">F&G na Venda</small>
+                                                <h5 id="projFngSell">--</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <canvas id="projChart" class="mt-4"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center text-secondary py-4 mt-5">
+        <small>
+            Dados fornecidos por Binance API e Alternative.me | 
+            Apenas para fins educacionais - Não é aconselhamento financeiro
+        </small>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
