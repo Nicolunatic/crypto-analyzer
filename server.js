@@ -86,8 +86,8 @@ app.get('/api/cryptos', async (req, res) => {
 
         // Buscar dados de preço da Binance
         const [tickerResponse, ticker24hResponse] = await Promise.all([
-            axios.get('https://api1.binance.com/api/v3/ticker/price'),
-            axios.get('https://api1.binance.com/api/v3/ticker/24hr')
+            axios.get('https://corsproxy.io/?https://api.binance.com/api/v3/ticker/price'),
+            axios.get('https://corsproxy.io/?https://api.binance.com/api/v3/ticker/24hr')
         ]);
 
         const prices = tickerResponse.data;
@@ -131,7 +131,7 @@ app.get('/api/ma50-backtest/:symbol', async (req, res) => {
         const endTime = Date.now();
         
         while (startTime < endTime) {
-            const response = await axios.get('https://api1.binance.com/api/v3/klines', {
+            const response = await axios.get('https://corsproxy.io/?https://api.binance.com/api/v3/klines', {
                 params: {
                     symbol: `${symbol.toUpperCase()}USDT`,
                     interval: '1d',
@@ -224,7 +224,7 @@ app.get('/api/klines/:symbol', async (req, res) => {
         const interval = req.query.interval || '1d';
         const limit = req.query.limit || 365;
 
-        const response = await axios.get('https://api1.binance.com/api/v3/klines', {
+        const response = await axios.get('https://corsproxy.io/?https://api.binance.com/api/v3/klines', {
             params: {
                 symbol: `${symbol.toUpperCase()}USDT`,
                 interval,
@@ -261,7 +261,7 @@ app.post('/api/simulate', async (req, res) => {
         
         // Buscar em lotes de 1000 (limite da API)
         while (startTime < endTime) {
-            const response = await axios.get('https://api1.binance.com/api/v3/klines', {
+            const response = await axios.get('https://corsproxy.io/?https://api.binance.com/api/v3/klines', {
                 params: {
                     symbol: `${symbol.toUpperCase()}USDT`,
                     interval: '1d',
